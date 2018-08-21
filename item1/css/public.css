@@ -1,0 +1,140 @@
+/*预设样式*/
+body,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 微软雅黑;
+	font-size: 14px;
+	color: #000;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+input{
+	outline: none;
+	font-family: 微软雅黑；
+}
+img{
+	border: none;
+}
+.bod{
+	border: 1px solid red;
+}
+/*TOP START*/
+.header{
+	width: 100%;
+	height: 80px;
+}
+.container{
+	width: 1200px;
+	height: 100%;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	width: 149px;
+	height: 75px;
+}
+.logo img{
+	width: 100%;
+}
+.container ul{
+	float: left;
+	width: 570px;
+	height: 100%;
+	margin-left: 210px;
+}
+.container ul li{
+	float: left;
+	width: 125px;
+	height: 100%;
+	text-align: center;
+	line-height: 80px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.container ul li:first-child{
+	width: 70px;
+}
+.container ul li a{
+	display: block;
+	width: 100%;
+	height: 80px;
+}
+.container ul li a.active,.container ul li a:hover{
+	color: #e87523;
+	background: #eeeeee;
+	border-bottom: 10px solid #e87523;
+}
+.search{
+	float: right;
+	width: 262px;
+	height: 28px;
+	margin-top: 26px;
+	border: 2px solid #e87523;
+	border-radius: 5px;
+}
+.search dt{
+	float: left;
+	width: 30px;
+	height: 26px !important;
+	border-right: 1px solid #e87523;
+}
+.search dt img{
+	margin: 5px;
+}
+.search dd input.text{
+	float: left;
+	width: 178px;
+	height: 24px;
+	color: #c9c7c7;
+	padding-left: 10px;
+	border: none;
+}
+.search dd input.sub{
+	float: left;
+	width: 50px;
+	height: 24px;
+	color: #fff;
+	border: none;
+	background: #e87523;
+}
+/*TOP END*/
+/*FOOTER START*/
+.footer{
+	width: 100%;
+	height: 140px;
+	padding-top: 1px;
+	background: #e86d19;
+}
+.footer div{
+	width: 680px;
+	height: 70px;
+	margin: 40px auto 0 auto;
+	text-align: center;
+	color: #fff;
+}
+.footer ul{
+	width: 365px;
+	height: 20px;
+	margin: 0 0 15px 170px;
+}
+.footer ul li{
+	float: left;
+	width: 60px;
+	height: 20px;
+	margin-left: 40px;
+}
+.footer ul li:first-child{
+	margin-left: 0;
+}
+.footer ul li a{
+	color: #fff;
+}
+/*FOOTER END*/
