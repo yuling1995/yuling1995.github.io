@@ -1,0 +1,248 @@
+/*HEAD START*/
+.search{
+	float: right;
+}
+.head{
+	border-bottom: 3px solid #ccc;
+}
+/*HEAD END*/
+/*PROGRESSBAR START*/
+.prograssBar{
+	width: 1200px;
+	height: 119px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+.prograssBarRight{
+	float: right;
+	width: 600px;
+	height: 40px;
+	margin-top: 38px;
+}
+.prograssBarRight div{
+	width: 491px;
+	height: 2px;
+	background: #336600;
+	margin: 6px 0 0 58px;
+	position: relative;
+}
+.prograssBarRight div p{
+	width: 15px;
+	height: 15px;
+	border: 2px solid #336600;
+	background: #f9f9f9;
+	border-radius: 50%;
+	position: absolute;
+	top: -7px;
+}
+.prograssBarRight div p:nth-of-type(1){
+	left: -7.5px;
+	position: relative;
+}
+.prograssBarRight div p:nth-of-type(2){
+	left: 245px;
+}
+.prograssBarRight div p:nth-of-type(3){
+	left: 483.5px;
+}
+.prograssBarRight div p:nth-of-type(1):after{
+	content: '我的购物车';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(2):after{
+	content: '填写订单';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(3):after{
+	content: '付款，完成购买';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p.active{
+	background: #336600;
+}
+.prograssBarRight div p.active:after{
+	color: #336600;
+}
+/*PROGRESSBAR END*/
+/*INFO START*/
+.info{
+	width: 1200px;
+	height: 156px;
+	margin: 0 auto;
+	border: 1px solid #b6db96;
+	background: #e2f8d1;
+	color: #333333;
+}
+.infoLeft{
+	width: 650px;
+	height: 128px;
+	margin: 11px 0 0 48px;
+	float: left;
+}
+.infoLeft h3{
+	height: 53px;
+	line-height: 53px;
+	padding-left: 48px;
+	color: #6f8962;
+	font-size: 22px;
+	font-weight: normal;
+	background: url(../img/pay_03.gif) no-repeat 0 8px;
+}
+.infoLeft h3 span{
+	font-size: 14px;
+	color: #999;
+}
+.infoLeft p{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 48px;
+}
+.infoLeft p span{
+	margin-right: 15px;
+}
+.infoRight{
+	width: 255px;
+	height: 34px;
+	margin: 60px 100px 0 0;
+	float: right;
+	font-size: 22px;
+}
+.infoRight span{
+	font-size: 36px;
+	color: #ff8109;
+}
+/*INFO END*/
+/*METHOD START*/
+.method{
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+}
+.method h3{
+	height: 80px;
+	line-height: 80px;
+	font-size: 24px;
+	font-weight: normal;
+}
+.method>div{
+	position: relative;
+	width: 1200px;
+	height: 221px;
+	border: 1px solid #ccc;
+	background: #fff;
+	box-shadow: 0 -2px 5px 1px #ccc;
+	padding: 32px 0 0 31px;
+}
+.method>div ul{
+	width: 340px;
+	height: 32px;
+	position: absolute;
+	top: -33px;
+	left: 167px;
+}
+.method>div li{
+	float: left;
+	width: 100px;
+	height: 32px;
+	margin-left: 20px;
+	border: 1px solid #999;
+	text-align: center;
+	line-height: 30px;
+	color: #227222;
+}
+.method>div li:nth-of-type(1){
+	margin-left: 0;
+}
+.method>div li.active{
+	color: #333333;
+	margin-top: 1px;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	box-shadow: 0 -3px 5px 1px #ccc;
+	background: #fff;
+}
+.method>div h4{
+	font-size: 20px;
+	height: 51px;
+	line-height: 51px;
+	font-weight: normal;
+}
+.method>div>div{
+	height: 40px;
+}
+.method>div>div input{
+	width: 40px;
+	height: 40px;
+	float: left;
+	border: 1px solid #333333;
+	margin-right: 2px;
+	text-align: center;
+	line-height: 38px;
+}
+.method>div>div a{
+	line-height: 38px;
+	margin-left: 23px;
+	color: #67a1fc;
+	font-size: 12px;
+}
+.method>div>p{
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	color: #999999;
+}
+.method>div>a{
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: #2d5ba3;
+}
+/*METHOD END*/
+/*PAY START*/
+.pay{
+	width: 1200px;
+	height: 120px;
+	margin: 34px auto 0 auto;
+	position: relative;
+}
+.pay p{
+	color: #999;
+	height: 30px;
+	line-height: 30px;
+	width: 630px;
+}
+.pay p a{
+	color: #164fb9;
+}
+.pay button{
+	color: #fff;
+	background: #fe8008;
+	font-size: 20px;
+	border: none;
+	width: 202px;
+	height: 56px;
+	position: absolute;
+	top: 32px;
+	right: 0;
+}
+/*PAY END*/
+
+
+
+
+

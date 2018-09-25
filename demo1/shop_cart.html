@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车页</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/shop_cart.css"/>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>	
+	</head>
+	<body>
+		<div id="shopcart">
+			<!--TOP START-->
+			<div id="top">
+				<div class="contant">
+					<span>您好，欢迎来到金穗商城！</span>
+					<ul>
+						<li><a href="user.html">我的账户<b>▼</b></a></li>
+						<li><a href="order.html">我的订单<b>▼</b></a></li>
+						<li><a href="#">选购中心</a></li>
+					</ul>
+					<span>您好，请<a href="login.html">登录</a>  <a href="register.html">免费注册</a></span>
+				</div>
+			</div>
+			<!--TOP END-->
+			<!--HEAD START-->
+			<div class="head">
+				<a href="index.html"><img src="img/index_03.gif" /></a>	
+				<div>
+					<form>
+						<input type="text" placeholder="请输入您需要的商品名称" />
+						<input type="submit" value="" />
+					</form>
+					<p>
+						<a href="shop_list.html">橱柜</a>
+						<a href="shop_list.html">洗碗机</a>
+						<a href="shop_list.html">瓷碗</a>
+						<a href="shop_list.html">压力锅</a>
+						<a href="shop_list.html">平底锅</a>
+						<a href="shop_list.html">抽烟机</a>
+					</p>
+				</div>
+				<a href="shop_cart.html">
+					我的购物车（<span>{{numbers}}</span>）>
+				</a>
+			</div>
+			<!--HEAD END-->
+			<!--PROGRESSBAR START-->
+			<div class="prograssBar">
+				<div class="prograssBarLeft">
+					<img src="img/shop_cart_03.gif" />
+					<b><span>1</span>/20</b>
+					<i>现在<a herf="login.html">登录</a>，你的商品将被保存在购物车</i>
+				</div>
+				<div class="prograssBarRight">
+					<div>
+						<p class="active"></p>
+						<p></p>
+						<p></p>
+					</div>
+				</div>
+			</div>
+			<!--PROGRESSBAR END-->
+			<!--TABLE START-->
+			<div class="table" id="table">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<thead>
+						<tr>
+							<th class="check"><span @click="checkAll" :class="{'active':onoff}"></span>全选</th>
+							<th class="proName">商品名称</th>
+							<th class="univalent">单价</th>
+							<th class="num">数量</th>
+							<th class="subtotal">小计</th>
+							<th class="handle">操作</th>
+						</tr>
+					</thead>
+					<tbody> 
+						<tr v-for="(item,index) in cartList">
+							<td class="check"><span @click="check(item)" :class="{'active':item.selected}"></span></td>
+							<td class="proName">
+								<div><img :src="item.imgsrc" /></div>
+								<h4>{{item.title}}</h4>
+								<p>类型：{{item.type}}</p>
+								<span @click="shows(item)">满赠
+									<img src="img/shop_cart_09.gif"/>
+									<b v-show="item.show"></b>
+								</span>
+							</td>
+							<td class="univalent">
+								<p>¥{{item.price}}</p>
+								<del>¥{{item.oldPrice}}</del>
+							</td>
+							<td class="num">
+								<div>
+									<button @click="subNum(item)">-</button>
+									<div>{{item.num}}</div>
+									<button @click="addNum(item)">+</button>
+								</div>
+							</td>
+							<td class="subtotal">
+								<p>¥{{item.num*item.price}}</p>
+								<b>省 ¥{{item.num*(item.oldPrice-item.price)}}</b>
+							</td>
+							<td class="handle">
+								<a href="javascript:;">收藏</a>
+								<a href="javascript:;" @click="del(index)">删除</a>
+							</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>
+								<a href="shop_list.html">&lt;继续购物</a>
+								<b>|</b>
+							</td>
+							<td>
+								<a href="javascript:;" @click="delAll">清空选中商品</a>
+							</td>
+							<td>
+								共<span>{{numbers}}</span>件商品
+							</td>
+							<td>
+								商品应付总额(不含运费)：<span>¥{{totol}}.00</span>
+							</td>
+							<td>
+								<button>去结算</button>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<!--TABLE END-->
+			<!--RECOMMEND START-->
+			<div class="recommend">
+				<h2>买了购物车的人还买了</h2>
+				<ul class="list">
+					<li v-for="item in goodsList">
+						<a href="pro_details.html"><img :src="item.img"/></a>
+						<h5><a href="pro_details.html">{{item.title}}</a></h5>
+						<p>¥ <span>{{item.price}}.00</span><del>¥{{item.oldPrice}}.00</del></p>
+						<button>加入购物车</button>
+						<button>收藏</button>
+					</li>
+				</ul>
+			</div>
+			<!--RECOMMEND END-->
+			
+			
+			
+			<!--FOOTER START-->
+			<div class="footer">
+				<ul>
+					<li>
+						<a href="#"><img src="img/index1_147.gif" /></a>
+						<span>正品保证</span>
+						<p>正品保障，提供发票</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_148.gif" /></a>
+						<span>无忧售后</span>
+						<p>7天无理由退换货</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_149.gif" /></a>
+						<span>极速物流</span>
+						<p>极速物流，极速送达</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_150.gif" /></a>
+						<span>特色服务</span>
+						<p>私人定制套餐</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_151.gif" /></a>
+						<span>帮助中心</span>
+						<p>您的购物指南</p>
+					</li>
+				</ul>
+				<div>
+					<dl>
+						<dt>新手上路</dt>
+						<dd>
+							<a href="#">订购方式</a>
+						</dd>
+						<dd>
+							<a href="#">购物流程</a>
+						</dd>
+						<dd>
+							<a href="#">在线支付</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>购物指南</dt>
+						<dd>
+							<a href="#">订购流程</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd>
+							<a href="#">货到付款区域</a>
+						</dd>
+						<dd>
+							<a href="#">支付方式说明</a>
+						</dd>
+						<dd>
+							<a href="#">配送支付查询</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="#">售后服务保证</a>
+						</dd>
+						<dd>
+							<a href="#">换货流程</a>
+						</dd>
+						<dd>
+							<a href="#">退换货流程</a>
+						</dd>
+					</dl>
+					<h3>0757-66601567</h3>
+					<button>24小时客服</button>
+				</div>
+				<p>
+					<a href="#">产品分类</a><span>|</span>
+					<a href="#">创意厨卫</a><span>|</span>
+					<a href="#">新闻资讯</a><span>|</span>
+					<a href="#">行业展会</a><span>|</span>
+					<a href="#">推荐品牌</a><span>|</span>
+					<a href="#">推荐厂家</a><span>|</span>
+					<a href="#">需求发布</a>
+				</p>
+				<p>
+					版权所有 2017 厨具网购商城 <span>|</span>备案编号:粤ICP备13000117号<span>|</span>电话：0757-66601666
+				</p>
+	
+			</div>
+			<!--FOOTER END-->
+			<!--RIGHTSIDEBAR START-->
+			<div class="rightsideBar">
+				<ol>
+					<li><a href="user.html"></a></li>
+					<li>
+						<a href="shop_cart.html">购物车<span>{{numbers}}</span></a>
+					</li>
+					<li><a href="#">我的消息</a></li>
+				</ol>
+				<ul>
+					<li><a href="#"><img src="img/index_150.gif" /></a></li>
+					<li><a href="#"><img src="img/index_151.gif" /></a></li>
+					<li><a href="#"><img src="img/index_152.gif" /></a></li>
+					<li><a href="#top"><img src="img/index_153.gif" /></a></li>
+				</ul>
+			</div>
+			<!--RIGHTSIDEBAR END-->
+		</div>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/shop_cart.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

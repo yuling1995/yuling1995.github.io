@@ -1,0 +1,225 @@
+/*HEAD START*/
+.search{
+	float: right;
+}
+.head{
+	border-bottom: 3px solid #ccc;
+}
+/*HEAD END*/
+/*PROGRESSBAR START*/
+.prograssBar{
+	width: 1200px;
+	height: 119px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+.prograssBarRight{
+	float: right;
+	width: 600px;
+	height: 40px;
+	margin-top: 38px;
+}
+.prograssBarRight div{
+	width: 491px;
+	height: 2px;
+	background: #336600;
+	margin: 6px 0 0 58px;
+	position: relative;
+}
+.prograssBarRight div p{
+	width: 15px;
+	height: 15px;
+	border: 2px solid #336600;
+	background: #f9f9f9;
+	border-radius: 50%;
+	position: absolute;
+	top: -7px;
+}
+.prograssBarRight div p:nth-of-type(1){
+	left: -7.5px;
+	position: relative;
+}
+.prograssBarRight div p:nth-of-type(2){
+	left: 245px;
+}
+.prograssBarRight div p:nth-of-type(3){
+	left: 483.5px;
+}
+.prograssBarRight div p:nth-of-type(1):after{
+	content: '我的购物车';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(2):after{
+	content: '填写订单';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(3):after{
+	content: '付款，完成购买';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p.active{
+	background: #336600;
+}
+.prograssBarRight div p.active:after{
+	color: #336600;
+}
+/*PROGRESSBAR END*/
+/*INFO START*/
+.info{
+	width: 1200px;
+	height: 236px;
+	margin: 0 auto;
+	border: 1px solid #b6db96;
+	background: #e2f8d1;
+	color: #333333;
+}
+.infoLeft{
+	width: 650px;
+	height: 128px;
+	margin: 11px 0 0 48px;
+	float: left;
+}
+.infoLeft h3{
+	height: 53px;
+	line-height: 53px;
+	padding-left: 48px;
+	color: #6f8962;
+	font-size: 22px;
+	font-weight: normal;
+	background: url(../img/pay_03.gif) no-repeat 0 8px;
+}
+.infoLeft h3 span{
+	color: #ff8109;
+}
+.infoLeft p{
+	height: 25px;
+	line-height: 25px;
+	padding-left: 48px;
+}
+.infoLeft a{
+	display: block;
+	padding-left: 48px;
+	color: #2057ac;
+	height: 28px;
+	line-height: 28px;
+}
+.infoLeft a:nth-of-type(1){
+	margin-top: 19px;
+}
+/*INFO END*/
+/*RECOMMEND START*/
+.recommend{
+	width: 1200px;
+	margin: 10px auto;
+}
+.recommend>h2{
+	width: 100%;
+	height: 112px;
+	color: #999;
+	font-size: 30px;
+	line-height: 112px;
+	font-weight: normal;
+	text-align: center;
+	position: relative;
+}
+.recommend>h2:before{
+	content: '';
+	width: 432px;
+	height: 2px;
+	background: #e5e5e5;
+	position: absolute;
+	top: 55px;
+	left: 0;
+}
+.recommend>h2:after{
+	content: '';
+	width: 432px;
+	height: 2px;
+	background: #e5e5e5;
+	position: absolute;
+	top: 55px;
+	right: 0;
+}
+.list{
+	width: 100%;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.list li{
+	width: 240px;
+	height: 380px;
+	float: left;
+	padding: 10px 8px;
+	border: 1px solid transparent;
+	margin: 0 0 10px 0;
+}
+.list li>a{
+	display: block;
+	width: 225px;
+	height:222px;
+
+}
+.list li h5{
+	font-size: 14px;
+	margin-top: 10px;
+	padding: 10px 5px 0 0;
+	font-weight: normal;
+	border-top: 1px solid #e8e8e8;
+	height: 35px;
+	font-family: '宋体';
+}
+.list li p{
+	color: #e9394e;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 15px;
+}
+.list li p span{
+	font-size: 20px;
+}
+.list li p del{
+	color: #666666;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+.list li button{
+	display: none;
+}
+.list li:hover{
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.list li:hover h5 a{
+	color: #e9394e;
+}
+.list li:hover button{
+	display: block;
+	height: 36px;
+	border: 1px solid #ddd;
+	background: #e9e9e9;
+	float: left;
+	width: 111px;
+	margin-top: 10px;
+	color: #c83140;
+}
+/*RECOMMEND END*/
+
+
+
+

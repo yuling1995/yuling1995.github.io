@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>收货地址管理</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/address.css" />
+	</head>
+	<body>
+		<!--TOP START-->
+		<div id="top">
+			<div class="contant">
+				<span>您好，欢迎来到金穗商城！</span>
+				<ul>
+					<li><a href="user.html">我的账户<b>▼</b></a></li>
+					<li><a href="order.html">我的订单<b>▼</b></a></li>
+					<li><a href="#">选购中心</a></li>
+				</ul>
+				<span>您好，请<a href="login.html">登录</a>  <a href="register.html">免费注册</a></span>
+			</div>
+		</div>
+		<!--TOP END-->
+		<!--HEAD START-->
+		<div class="head">
+			<a href="index.html"><img src="img/index_03.gif" /></a>	
+			<div>
+				<form>
+					<input type="text" placeholder="请输入您需要的商品名称" />
+					<input type="submit" value="" />
+				</form>
+				<p>
+					<a href="shop_list.html">橱柜</a>
+					<a href="shop_list.html">洗碗机</a>
+					<a href="shop_list.html">瓷碗</a>
+					<a href="shop_list.html">压力锅</a>
+					<a href="shop_list.html">平底锅</a>
+					<a href="shop_list.html">抽烟机</a>
+				</p>
+			</div>
+			<a href="shop_cart.html">
+				我的购物车（<span>0</span>）>
+			</a>
+		</div>
+		<!--HEAD END-->
+		<!--NAV START-->
+		<div class="nav">
+			<div class="contant">
+				<div class="navs">
+					<h2 class="address">
+						我的金穗
+					</h2>
+				</div>
+				<ul>
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="#">账户设置</a>
+					</li>
+					<li>
+						<a href="#">消息</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--NAV END-->
+		<!--MAIN START-->
+		<div class="main">
+			<div class="subnav">
+				<dl>
+					<dt>
+						<a href="javascript:;">-</a>
+						我的交易
+					</dt>
+					<dd><a href="order.html">我的订单</a></dd>
+					<dd><a href="#">我的积分</a></dd>
+					<dd><a href="#">我的优惠券</a></dd>
+					<dd><a href="#">我的站内信</a></dd>
+					<dd><a href="#">我的收藏</a></dd>
+					<dd><a href="evaluate.html">我的评价</a></dd>
+					<dd><a href="#">售后咨询</a></dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="javascript:;">-</a>
+						个人资料设置
+					</dt>
+					<dd><a href="#">个人资料设置</a></dd>
+					<dd><a href="#">安全中心</a></dd>
+					<dd><a href="address.html" class="active">收货地址管理</a></dd>
+					<dd><a href="#">第三方平台绑定</a></dd>
+				</dl>
+				<dl>
+					<dt>
+						<a href="javascript:;">+</a>
+						VIP贵宾
+					</dt>
+				</dl>
+			</div>
+			<div class="mainRight">
+				<div class="info">
+					<h3>收货地址</h3>
+					<h4>新增收货地址</h4>
+					<div class="line1">
+						<span>所在地区</span>
+						<button>中国大陆<img src="img/shop_list_13.gif"/></button>
+						<input type="text" placeholder="请选择省市区" />
+					</div>
+					<div class="line2">
+						<span>详情地址</span>
+						<textarea placeholder="建议您如实填写详细收货地址"></textarea>
+					</div>
+					<div class="line3">
+						<span>邮政编码</span>
+						<input type="text" placeholder="如您不清楚邮政区号，请填写000000" />
+					</div>
+					<div class="line3">
+						<span>收件人姓名</span>
+						<input type="text" placeholder="长度不超过15个字符" />
+					</div>
+					<div class="line5">
+						<span>手机号码</span>
+						<button>中国大陆 +86<img src="img/shop_list_13.gif"/></button>
+						<input type="text" placeholder="电话号码、手机号码必须填一项" />
+					</div>
+					<div class="line5">
+						<span>电话号码</span>
+						<button>中国大陆 +86<img src="img/shop_list_13.gif"/></button>
+						<input type="text" placeholder="电话号码、手机号码必须填一项" />
+					</div>
+					<div class="line7">
+						<a href="javascript:;"></a>
+						<p>设置为默认收货地址</p>
+					</div>
+					<div class="line8">
+						<button>保存</button>
+					</div>
+				</div>
+				<div class="table">
+					<div class="line1">
+						<span class="column1">收货人</span>
+						<span class="column2">所在地区</span>
+						<span class="column3">详细地址</span>
+						<span class="column4">邮编</span>
+						<span class="column5">电话/手机</span>
+						<span class="column6">操作</span>
+					</div>
+					<div class="line2">
+						<span class="column1">阿呆</span>
+						<span class="column2">广东省 广州市 天河区林和街道 </span>
+						<span class="column3">天河路123号1001室</span>
+						<span class="column4">000000</span>
+						<span class="column5">13*******23</span>
+						<span class="column6">
+							<a href="javascript:;">修改</a>
+							<span>|</span>
+							<a href="javascript:;">删除</a>
+						</span>
+						<span class="column7">
+							<a href="javascript:;">设为默认地址</a>
+						</span>
+					</div>
+					<div class="line2">
+						<span class="column1">阿呆</span>
+						<span class="column2">广东省 广州市 天河区林和街道 </span>
+						<span class="column3">天河路123号1001室</span>
+						<span class="column4">000000</span>
+						<span class="column5">13*******23</span>
+						<span class="column6">
+							<a href="javascript:;">修改</a>
+							<span>|</span>
+							<a href="javascript:;">删除</a>
+						</span>
+					</div>
+					<div class="line3">
+						<span class="column1">阿呆</span>
+						<span class="column2">广东省 广州市 天河区林和街道 </span>
+						<span class="column3">天河路123号1001室</span>
+						<span class="column4">000000</span>
+						<span class="column5">13*******23</span>
+						<span class="column6">
+							<a href="javascript:;">修改</a>
+							<span>|</span>
+							<a href="javascript:;">删除</a>
+						</span>
+						<span class="column7">
+							<a href="javascript:;">默认地址</a>
+						</span>
+					</div>
+					<div class="line2">
+						<span class="column1">阿呆</span>
+						<span class="column2">广东省 广州市 天河区林和街道 </span>
+						<span class="column3">天河路123号1001室</span>
+						<span class="column4">000000</span>
+						<span class="column5">13*******23</span>
+						<span class="column6">
+							<a href="javascript:;">修改</a>
+							<span>|</span>
+							<a href="javascript:;">删除</a>
+						</span>
+					</div>
+					<div class="line2">
+						<span class="column1">阿呆</span>
+						<span class="column2">广东省 广州市 天河区林和街道 </span>
+						<span class="column3">天河路123号1001室</span>
+						<span class="column4">000000</span>
+						<span class="column5">13*******23</span>
+						<span class="column6">
+							<a href="javascript:;">修改</a>
+							<span>|</span>
+							<a href="javascript:;">删除</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--MAIN END-->
+		<!--FOOTER START-->
+		<div class="footer">
+			<ul>
+				<li>
+					<a href="#"><img src="img/index1_147.gif" /></a>
+					<span>正品保证</span>
+					<p>正品保障，提供发票</p>
+				</li>
+				<li>
+					<a href="#"><img src="img/index1_148.gif" /></a>
+					<span>无忧售后</span>
+					<p>7天无理由退换货</p>
+				</li>
+				<li>
+					<a href="#"><img src="img/index1_149.gif" /></a>
+					<span>极速物流</span>
+					<p>极速物流，极速送达</p>
+				</li>
+				<li>
+					<a href="#"><img src="img/index1_150.gif" /></a>
+					<span>特色服务</span>
+					<p>私人定制套餐</p>
+				</li>
+				<li>
+					<a href="#"><img src="img/index1_151.gif" /></a>
+					<span>帮助中心</span>
+					<p>您的购物指南</p>
+				</li>
+			</ul>
+			<div>
+				<dl>
+					<dt>新手上路</dt>
+					<dd>
+						<a href="#">订购方式</a>
+					</dd>
+					<dd>
+						<a href="#">购物流程</a>
+					</dd>
+					<dd>
+						<a href="#">在线支付</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>购物指南</dt>
+					<dd>
+						<a href="#">订购流程</a>
+					</dd>
+					<dd>
+						<a href="#">常见问题</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>配送方式</dt>
+					<dd>
+						<a href="#">货到付款区域</a>
+					</dd>
+					<dd>
+						<a href="#">支付方式说明</a>
+					</dd>
+					<dd>
+						<a href="#">配送支付查询</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>售后服务</dt>
+					<dd>
+						<a href="#">售后服务保证</a>
+					</dd>
+					<dd>
+						<a href="#">换货流程</a>
+					</dd>
+					<dd>
+						<a href="#">退换货流程</a>
+					</dd>
+				</dl>
+				<h3>0757-66601567</h3>
+				<button>24小时客服</button>
+			</div>
+			<p>
+				<a href="#">产品分类</a><span>|</span>
+				<a href="#">创意厨卫</a><span>|</span>
+				<a href="#">新闻资讯</a><span>|</span>
+				<a href="#">行业展会</a><span>|</span>
+				<a href="#">推荐品牌</a><span>|</span>
+				<a href="#">推荐厂家</a><span>|</span>
+				<a href="#">需求发布</a>
+			</p>
+			<p>
+				版权所有 2017 厨具网购商城 <span>|</span>备案编号:粤ICP备13000117号<span>|</span>电话：0757-66601666
+			</p>
+
+		</div>
+		<!--FOOTER END-->
+	</body>
+</html>
+

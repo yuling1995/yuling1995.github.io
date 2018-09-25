@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>	
+	</head>
+	<body>
+		<div id="indexBox">
+			<!--TOP START-->
+			<div id="top">
+				<div class="contant">
+					<span>您好，欢迎来到金穗商城！</span>
+					<ul>
+						<li><a href="user.html">我的账户<b>▼</b></a></li>
+						<li><a href="order.html">我的订单<b>▼</b></a></li>
+						<li><a href="#">选购中心</a></li>
+					</ul>
+					<span>您好，请<a href="login.html">登录</a>  <a href="register.html">免费注册</a></span>
+				</div>
+			</div>
+			<!--TOP END-->
+			<!--HEAD START-->
+			<div class="head">
+				<a href="index.html"><img src="img/index_03.gif" /></a>	
+				<div>
+					<form>
+						<input type="text" placeholder="请输入您需要的商品名称" />
+						<input type="submit" value="" />
+					</form>
+					<p>
+						<a href="shop_list.html">橱柜</a>
+						<a href="shop_list.html">洗碗机</a>
+						<a href="shop_list.html">瓷碗</a>
+						<a href="shop_list.html">压力锅</a>
+						<a href="shop_list.html">平底锅</a>
+						<a href="shop_list.html">抽烟机</a>
+					</p>
+				</div>
+				<a href="shop_cart.html">
+					我的购物车（<span>0</span>）>
+				</a>
+			</div>
+			<!--HEAD END-->
+			<!--NAV START-->
+			<div class="nav">
+				<div class="contant">
+					<div class="navs" id="navs">
+						<h2>
+							所有商品分类
+						</h2>
+						<div class="nav-item" v-for="item in list">
+							<div class="item-header">
+								<h4><img :src="item.imgSrc"/>{{item.title}}  ></h4>
+								<a href="shop_list.html" v-for="itemarr in item.arr">{{itemarr}}</a>
+							</div>
+							<div class="item-body">
+								<p><a href="#">更多{{item.title}}>></a></p>
+								<div v-for="itemobj in item.obj">
+									<h5>{{itemobj}} :</h5>
+									<p>
+										<a href="shop_list.html" v-for="knifeitem in knife">{{knifeitem}}</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p>
+							<a href="shop_list.html">查看更多厨房用品>></a>
+						</p>
+					</div>
+					<ul>
+						<li>
+							<a href="index.html" class="active">首页</a>
+						</li>
+						<li>
+							<a href="shop_list.html">本周热卖</a>
+						</li>
+						<li>
+							<a href="shop_list.html">限时抢购</a>
+						</li>
+						<li>
+							<a href="shop_list.html">厨电用品</a>
+						</li>
+						<li>
+							<a href="shop_list.html">餐具用品</a>
+						</li>
+						<li>
+							<a href="shop_list.html">全球购</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--NAV END-->
+			<!--BANNER START-->
+			<div class="banner">
+				<a href="#"></a>
+				<ul>
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<button class="btn-l"></button>
+				<button class="btn-r"></button>
+			</div>
+			<!--BANNER END-->
+			<!--SECKILL START-->
+			<div class="seckill">
+				<div class="session">
+					<div><img src="img/index_17.gif" /></div>
+					<p id="time">
+						<b><img src="img/index_18.gif" /></b>
+						<span>00</span>:
+						<span>33</span>:
+						<span>50</span>
+					</p>
+					<ul id='field'>
+						<li><a href="#" class="active">00:00场</a></li>
+						<li><a href="#">10:00场</a></li>
+						<li><a href="#">12:00场</a></li>
+						<li><a href="#">17:00场</a></li>
+						<li><a href="#">22:00场</a></li>
+					</ul>
+				</div>
+				<ul class="list" id="seckill">
+					<!--<li>
+						<a href="pro_details.html"><img src="img/index_22.gif" /></a>
+						<div class="prograssBar">
+							<div class="percent99"></div>
+							<p>已秒杀<span>99</span>%</p>
+						</div>
+						<h5><a href="pro_details.html">通用少油烟砂锅+锅铲</a></h5>
+						<p>秒杀价：<b>¥ 135.00</b></p>
+					</li>-->
+				</ul>
+				<div class="more">
+					<a href="#">查看更多秒杀精品...</a>
+				</div>
+			</div>
+			<!--SECKILL END-->
+			<!--MIDDLE-ONE START-->
+			<div class="middle-one" id="one">
+				<div class="title">
+					<span><img src="img/index_47.gif" /></span>
+				</div>
+				<div class="left">
+					<img src="img/index_48.gif" />
+				</div>
+				<ul>
+					<li v-for="oneArr in oneArr">
+						<a href="pro_details.html"><img :src="oneArr.img" /></a>
+						<h5><a href="pro_details.html">{{oneArr.title}}</a></h5>
+						<del>{{oneArr.oldPrice}}</del>
+						<p>{{oneArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+						<span class="follow"><b>关注</b></span>
+					</li>
+				</ul>
+				<div class="right">
+					<div>
+						<img src="img/index_58.gif" />
+						<button>去看看>></button>
+					</div>
+					<div>
+						<img src="img/index_57.gif" />
+						<button>进入频道>></button>
+					</div>
+				</div>
+			</div>
+			<div class="middle-floor contant">
+				<a href="#">
+					<img src="img/index_59.gif" />
+				</a>
+			</div>
+			<!--MIDDLE-ONE END-->
+			<!--MIDDLE-TWO START-->
+			<div class="middle-one contant" id="two">
+				<div class="title">
+					<span><img src="img/index_61.gif" /></span>
+				</div>
+				<div class="left">
+					<img src="img/index_64.gif" />
+				</div>
+				<ul>
+					<li v-for="oneArr in oneArr">
+						<a href="pro_details.html"><img :src="oneArr.img" /></a>
+						<h5><a href="pro_details.html">{{oneArr.title}}</a></h5>
+						<del>{{oneArr.oldPrice}}</del>
+						<p>{{oneArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+						<span class="follow"><b>关注</b></span>
+					</li>
+				</ul>
+				<div class="right">
+					<div>
+						<img src="img/index_62.gif" />
+						<button>去看看>></button>
+					</div>
+					<div>
+						<img src="img/index_73.gif" />
+						<button>进入频道>></button>
+					</div>
+				</div>
+			</div>
+			<div class="middle-floor contant">
+				<a href="#">
+					<img src="img/index_68.gif" />
+				</a>
+			</div>
+			<!--MIDDLE-TWO END-->
+			<!--MIDDLE-THREE START-->
+			<div class="middle-one contant" id="three">
+				<div class="title">
+					<span><img src="img/index_79.gif" /></span>
+				</div>
+				<div class="left">
+					<img src="img/index_80.gif" />
+				</div>
+				<ul>
+					<li v-for="oneArr in oneArr">
+						<a href="pro_details.html"><img :src="oneArr.img" /></a>
+						<h5><a href="pro_details.html">{{oneArr.title}}</a></h5>
+						<del>{{oneArr.oldPrice}}</del>
+						<p>{{oneArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+						<span class="follow"><b>关注</b></span>
+					</li>
+				</ul>
+				<div class="right">
+					<div>
+						<img src="img/index_81.gif" />
+						<button>去看看>></button>
+					</div>
+					<div>
+						<img src="img/index_82.gif" />
+						<button>进入频道>></button>
+					</div>
+				</div>
+			</div>
+			<div class="middle-floor contant">
+				<a href="#">
+					<img src="img/index_92.gif" />
+				</a>
+			</div>
+			<!--MIDDLE-THREE END-->
+			<!--MIDDLE-FOUR START-->
+			<div class="middle-one contant" id="four">
+				<div class="title">
+					<span><img src="img/index_93.gif" /></span>
+				</div>
+				<div class="left">
+					<img src="img/index_95.gif" />
+				</div>
+				<ul>
+					<li v-for="oneArr in oneArr">
+						<a href="pro_details.html"><img :src="oneArr.img" /></a>
+						<h5><a href="pro_details.html">{{oneArr.title}}</a></h5>
+						<del>{{oneArr.oldPrice}}</del>
+						<p>{{oneArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+						<span class="follow"><b>关注</b></span>
+					</li>
+				</ul>
+				<div class="right">
+					<div>
+						<img src="img/index_96.gif" />
+						<button>去看看>></button>
+					</div>
+					<div>
+						<img src="img/index_101.gif" />
+						<button>进入频道>></button>
+					</div>
+				</div>
+			</div>
+			<div class="middle-floor contant">
+				<a href="#">
+					<img src="img/index_94.gif" />
+				</a>
+			</div>
+			<!--MIDDLE-FOUR END-->
+			<!--MIDDLE-FIVE START-->
+			<div class="middle-one contant" id="five">
+				<div class="title">
+					<span><img src="img/index_106.gif" /></span>
+				</div>
+				<div class="left">
+					<img src="img/index_107.gif" />
+				</div>
+				<ul>
+					<li v-for="oneArr in oneArr">
+						<a href="pro_details.html"><img :src="oneArr.img" /></a>
+						<h5><a href="pro_details.html">{{oneArr.title}}</a></h5>
+						<del>{{oneArr.oldPrice}}</del>
+						<p>{{oneArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+						<span class="follow"><b>关注</b></span>
+					</li>
+				</ul>
+				<div class="right">
+					<div>
+						<img src="img/index_108.gif" />
+						<button>去看看>></button>
+					</div>
+					<div>
+						<img src="img/index_118.gif" />
+						<button>进入频道>></button>
+					</div>
+				</div>
+			</div>
+			<div class="middle-floor contant">
+				<a href="#">
+					<img src="img/index_117.gif" />
+				</a>
+			</div>
+			<!--MIDDLE-FIVE END-->
+			<!--RECOMMEND START-->
+			<div class="recommend" id="six">
+				<h1></h1>
+				<div class="left">
+					<a href="#"></a>
+				</div>
+				<div class="center">
+					<div class="centerUp">
+						<div>
+							<a href="#"><img src="img/index_121.gif" /></a>
+							<a href="#"><img src="img/index_125.gif" /></a>
+						</div>
+						<div>
+							<a href="pro_details.html"><img src="img/index_123.gif" /></a>
+							<h5><a href="pro_details.html">韩国进口电磁炉通用煎...</a></h5>
+							<del>199</del>
+							<p>235.00</p>
+							<a href="shop_cart.html"></a>
+						</div>
+					</div>
+					<div class="smailBanner">
+						<a href="#"><img src="img/index_126.gif"/></a>
+						<ul>
+							<li class="active"></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right">
+					<a href="#"></a>
+				</div>
+				<ul class="rightmost">
+					<li>
+						<a href="pro_details.html"><img src="img/index_124.gif" /></a>
+						<h5><a href="pro_details.html">孔雀尾系列不锈钢七件刀</a></h5>
+						<del>199</del>
+						<p>120.00</p>
+						<a href="shop_cart.html"></a>
+					</li>
+					<li>
+						<a href="pro_details.html"><img src="img/index_127.gif" /></a>
+						<h5><a href="pro_details.html">电饭煲3l迷你学生小电饭锅</a></h5>
+						<del>199</del>
+						<p>100.00</p>
+						<a href="shop_cart.html"></a>
+					</li>
+				</ul>
+			</div>
+			<!--RECOMMEND END-->
+			<!--AMBRY START-->
+			<div class="ambry" id="seven">
+				<ul>
+					<li v-for="ambryArr in ambryArr">
+						<a href="pro_details.html"><img :src="ambryArr.img" /></a>
+						<h5><a href="pro_details.html">{{ambryArr.title}}</a></h5>
+						<del>{{ambryArr.oldPrice}}</del>
+						<p>{{ambryArr.price}}.00</p>
+						<a href="shop_cart.html"></a>
+					</li>
+				</ul>
+				<div class="ambry-floor">
+					<a href="#"><img src="img/index_138.gif" /></a>
+				</div>
+			</div>
+			<!--AMBRY END-->
+			<!--HOT-BRAND START-->
+			<div class="brand contant" id="eight">
+				<h2></h2>
+				<button class="btn-l"></button>
+				<div class="box"> 
+					<ul>
+						<li v-for="brandArr in brandArr">
+							<a href="#"><img :src="brandArr" /></a>
+						</li>
+					</ul>
+				</div>
+					
+				<button class="btn-r"></button>
+			</div>
+			<!--HOT-BRAND END-->
+			<!--FOOTER START-->
+			<div class="footer">
+				<ul>
+					<li>
+						<a href="#"><img src="img/index1_147.gif" /></a>
+						<span>正品保证</span>
+						<p>正品保障，提供发票</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_148.gif" /></a>
+						<span>无忧售后</span>
+						<p>7天无理由退换货</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_149.gif" /></a>
+						<span>极速物流</span>
+						<p>极速物流，极速送达</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_150.gif" /></a>
+						<span>特色服务</span>
+						<p>私人定制套餐</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_151.gif" /></a>
+						<span>帮助中心</span>
+						<p>您的购物指南</p>
+					</li>
+				</ul>
+				<div>
+					<dl>
+						<dt>新手上路</dt>
+						<dd>
+							<a href="#">订购方式</a>
+						</dd>
+						<dd>
+							<a href="#">购物流程</a>
+						</dd>
+						<dd>
+							<a href="#">在线支付</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>购物指南</dt>
+						<dd>
+							<a href="#">订购流程</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd>
+							<a href="#">货到付款区域</a>
+						</dd>
+						<dd>
+							<a href="#">支付方式说明</a>
+						</dd>
+						<dd>
+							<a href="#">配送支付查询</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="#">售后服务保证</a>
+						</dd>
+						<dd>
+							<a href="#">换货流程</a>
+						</dd>
+						<dd>
+							<a href="#">退换货流程</a>
+						</dd>
+					</dl>
+					<h3>0757-66601567</h3>
+					<button>24小时客服</button>
+				</div>
+				<p>
+					<a href="#">产品分类</a><span>|</span>
+					<a href="#">创意厨卫</a><span>|</span>
+					<a href="#">新闻资讯</a><span>|</span>
+					<a href="#">行业展会</a><span>|</span>
+					<a href="#">推荐品牌</a><span>|</span>
+					<a href="#">推荐厂家</a><span>|</span>
+					<a href="#">需求发布</a>
+				</p>
+				<p>
+					版权所有 2017 厨具网购商城 <span>|</span>备案编号:粤ICP备13000117号<span>|</span>电话：0757-66601666
+				</p>
+	
+			</div>
+			<!--FOOTER END-->
+			<!--RIGHTSIDEBAR START-->
+			<div class="rightsideBar">
+				<ol>
+					<li><a href="user.html"></a></li>
+					<li>
+						<a href="shop_cart.html">购物车<span>0</span></a>
+					</li>
+					<li><a href="#">我的消息</a></li>
+				</ol>
+				<ul>
+					<li><a href="#"><img src="img/index_150.gif" /></a></li>
+					<li><a href="#"><img src="img/index_151.gif" /></a></li>
+					<li><a href="#"><img src="img/index_152.gif" /></a></li>
+					<li><a href="#top"><img src="img/index_153.gif" /></a></li>
+				</ul>
+			</div>
+			<!--RIGHTSIDEBAR END-->
+			<!--LEFTSIDEBAR START-->
+			<div class="leftsideBar">
+				<div><img src="img/index_155.png" /></div>
+				<ul>
+					<li><a href="#one" class="active">1楼</a></li>
+					<li><a href="#two">2楼</a></li>
+					<li><a href="#three">3楼</a></li>
+					<li><a href="#four">4楼</a></li>
+					<li><a href="#five">5楼</a></li>
+					<li><a href="#six">6楼</a></li>
+					<li><a href="#seven">7楼</a></li>
+					<li><a href="#eight">8楼</a></li>
+					<li><a href="#top">TOP</a></li>
+				</ul>
+			</div>
+			<!--LEFTSIDEBAR END-->
+		</div>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+</html>

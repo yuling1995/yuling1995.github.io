@@ -1,0 +1,498 @@
+/*HEAD START*/
+.search{
+	float: right;
+}
+.head{
+	border-bottom: 3px solid #ccc;
+}
+/*HEAD END*/
+/*PROGRESSBAR START*/
+.prograssBar{
+	width: 1200px;
+	height: 118px;
+	margin: 0 auto;
+	padding-top: 1px;
+}
+.prograssBarLeft{
+	float: left;
+	width: 540px;
+	height: 52px;
+	margin-top: 32px;
+}
+.prograssBarLeft img{
+	width: 194px;
+	height: 52px;
+	float: left;
+}
+.prograssBarLeft b{
+	font-weight: normal;
+	font-size: 20px;
+	margin-left: 15px;
+	float: left;
+	margin-top: 26px;
+}
+.prograssBarLeft b span{
+	color: #cc3333;
+}
+.prograssBarLeft i{
+	font-style: normal;
+	margin-left: 16px;
+	float: left;
+	margin-top: 32px;
+}
+.prograssBarLeft i a{
+	color: #336600;
+}
+.prograssBarRight{
+	float: right;
+	width: 600px;
+	height: 40px;
+	margin-top: 38px;
+}
+.prograssBarRight div{
+	width: 491px;
+	height: 2px;
+	background: #336600;
+	margin: 6px 0 0 58px;
+	position: relative;
+}
+.prograssBarRight div p{
+	width: 15px;
+	height: 15px;
+	border: 2px solid #336600;
+	background: #f9f9f9;
+	border-radius: 50%;
+	position: absolute;
+	top: -7px;
+}
+.prograssBarRight div p:nth-of-type(1){
+	left: -7.5px;
+	position: relative;
+}
+.prograssBarRight div p:nth-of-type(2){
+	left: 245px;
+}
+.prograssBarRight div p:nth-of-type(3){
+	left: 483.5px;
+}
+.prograssBarRight div p:nth-of-type(1):after{
+	content: '我的购物车';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(2):after{
+	content: '填写订单';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p:nth-of-type(3):after{
+	content: '付款，完成购买';
+	width: 100px;
+	text-align: center;
+	color: #999999;
+	position: absolute;
+	top: 18px;
+	left: -45px;
+}
+.prograssBarRight div p.active{
+	background: #336600;
+}
+.prograssBarRight div p.active:after{
+	color: #336600;
+}
+/*PROGRESSBAR END*/
+/*TABLE START*/
+.table{
+	width: 1200px;
+	/*height: 286px;*/
+	margin: 0 auto;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+.table thead{
+	width: 100%;
+	height: 39px;
+	background: #e8e8e8;
+	line-height: 38px;
+	font-size: 18px;
+}
+.table thead th{
+	font-weight: normal;
+	border-bottom: 1px solid #ccc;
+}
+.check{
+	float: left;
+	width: 98px;
+	height: 100%;
+	padding-left: 30px;
+}
+.proName{
+	float: left;
+	width: 404px;
+	height: 100%;
+	padding-left: 75px;
+	text-align: left;
+}
+.univalent{
+	float: left;
+	width: 186px;
+	height: 100%;
+	text-align: center;
+}
+.num{
+	float: left;
+	width: 162px;
+	height: 100%;
+	text-align: center;
+}
+.subtotal{
+	float: left;
+	width: 182px;
+	height: 100%;
+	text-align: center;
+}
+.handle{
+	float: left;
+	width: 166px;
+	height: 100%;
+	text-align: center;
+}
+.table thead th.check span{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #333;
+	margin: 9px 5px 0 0;
+	cursor: pointer;
+}
+.table thead th.check span.active{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: none;
+	background: #e74248 url(../img/shop_cart_07.gif) no-repeat center;
+	margin: 9px 5px 0 0;
+	cursor: pointer;
+}
+
+.table tbody tr{
+	height: 166px;
+	width: 100%;
+	float: left;
+	background: #fff;
+}
+.table tbody td{
+	height: 166px;
+}
+.table tbody td.check span{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #333;
+	margin-top: 73px;
+	cursor: pointer;
+}
+.table tbody td.check span.active{
+	float: left;
+	width: 20px;
+	height: 20px;
+	border: none;
+	background: #e74248 url(../img/shop_cart_07.gif) no-repeat center;
+	margin-top: 73px;
+	cursor: pointer;
+}
+.table tbody td.proName{
+	padding:30px 0 0 25px;
+}
+.table tbody td.proName div{
+	width: 106px;
+	height: 106px;
+	float: left;
+	border: 1px solid #ccc;	
+	margin-right: 17px;
+	border-radius: 2px;
+}
+.table tbody td.proName div img{
+	width: 100%;
+	height: 100%;
+}
+.table tbody td.proName h4{
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: normal;
+}
+.table tbody td.proName p{
+	height: 46px;
+	line-height: 46px;
+	color: #666;
+	font-size: 14px;
+}
+.table tbody td.proName span{
+	float: left;
+	width: 61px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background: #ff3333;
+	font-size: 14px;
+	border-radius: 10px;
+	margin-top: 3px;
+	cursor: pointer;
+	position: relative;
+}
+.table tbody td.proName span img{
+	width: 11px;
+	height: 10px;
+	margin: 5px 0 0 2px;
+}
+.table tbody td.proName span b{
+	width: 300%;
+	height: 100%;
+	background:#ff3333;
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.table tbody td.univalent{
+	padding:61px 0 0 0;
+}
+.table tbody td.univalent p{
+	font-size: 18px;
+	height: 24px;
+	line-height: 24px;
+}
+.table tbody td.univalent del{
+	color: #999999;
+	height: 19px;
+	line-height: 19px;
+	font-size: 14px;
+}
+.table tbody td.num{
+	padding: 68px 0 0 41px;
+}
+.table tbody td.num>div{
+	width: 78px;
+	height: 30px;
+	border: 1px solid #ccc;
+	font-size: 18px;
+}
+.table tbody td.num>div button{
+	width: 17px;
+	height: 100%;
+	float: left;
+	border: none;
+	background: #eeeeee;
+}
+.table tbody td.num>div div{
+	width: 42px;
+	height: 100%;
+	line-height: 28px;
+	float: left;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+.table tbody td.subtotal{
+	padding:61px 0 0 0;
+}
+.table tbody td.subtotal p{
+	font-size: 18px;
+	height: 24px;
+	line-height: 24px;
+	color: #CC3333;
+}
+.table tbody td.subtotal b{
+	height: 19px;
+	line-height: 19px;
+	font-size: 14px;
+	font-weight: normal;
+}
+.table tbody td.handle{
+	padding:42px 0 0 0;
+}
+.table tbody td.handle a{
+	float: left;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	font-size: 18px;
+	color: #666666;
+}
+.table tfoot{
+	float: left;
+	width: 100%;
+	border-top: 1px solid #ccc;
+}
+.table tfoot tr{
+	width: 100%;
+	height: 79px;
+	background: #f3f3f3;
+	border-top: 1px solid #ccc;
+	line-height: 79px;
+	overflow: hidden;
+}
+.table tfoot td:nth-of-type(1){
+	float: left;
+}
+.table tfoot td:nth-of-type(1) b{
+	margin: 0 18px;
+}
+.table tfoot td:nth-of-type(2){
+	float: left;
+}
+.table tfoot td:nth-of-type(3){
+	width: 450px;
+	text-align: right;
+	font-size: 16px;
+	float: left;
+}
+.table tfoot td:nth-of-type(3) span{
+	font-size: 26px;
+	color: #e84148;
+}
+.table tfoot td:nth-of-type(4){
+	width: 352px;
+	text-align: center;
+	font-size: 16px;
+}
+.table tfoot td:nth-of-type(4) span{
+	font-size: 26px;
+	color: #e84148;
+}
+.table tfoot td>button{
+	width: 200px;
+	height: 84px;
+	float: left;
+	margin: -1px -1px 0 0; 
+	background: #e84148;
+	border: none;
+	color: #fff;
+	font-size: 30px;
+}
+/*TABLE END*/
+
+
+/*RECOMMEND START*/
+.recommend{
+	width: 1200px;
+	margin: 10px auto;
+}
+.recommend>h2{
+	width: 100%;
+	height: 112px;
+	color: #999;
+	font-size: 30px;
+	line-height: 112px;
+	font-weight: normal;
+	text-align: center;
+	position: relative;
+}
+.recommend>h2:before{
+	content: '';
+	width: 432px;
+	height: 2px;
+	background: #e5e5e5;
+	position: absolute;
+	top: 55px;
+	left: 0;
+}
+.recommend>h2:after{
+	content: '';
+	width: 432px;
+	height: 2px;
+	background: #e5e5e5;
+	position: absolute;
+	top: 55px;
+	right: 0;
+}
+.list{
+	width: 100%;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.list li{
+	width: 240px;
+	height: 380px;
+	float: left;
+	padding: 10px 8px;
+	border: 1px solid transparent;
+	margin: 0 0 10px 0;
+}
+.list li>a{
+	display: block;
+	width: 225px;
+	height:222px;
+
+}
+.list li h5{
+	font-size: 14px;
+	margin-top: 10px;
+	padding: 10px 5px 0 0;
+	font-weight: normal;
+	border-top: 1px solid #e8e8e8;
+	height: 35px;
+	font-family: '宋体';
+}
+.list li p{
+	color: #e9394e;
+	font-weight: bold;
+	font-size: 14px;
+	margin-top: 15px;
+}
+.list li p span{
+	font-size: 20px;
+}
+.list li p del{
+	color: #666666;
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 20px;
+}
+.list li button{
+	display: none;
+}
+.list li:hover{
+	border: 1px solid #ccc;
+	background: #fff;
+}
+.list li:hover h5 a{
+	color: #e9394e;
+}
+.list li:hover button{
+	display: block;
+	height: 36px;
+	border: 1px solid #ddd;
+	background: #e9e9e9;
+	float: left;
+	width: 111px;
+	margin-top: 10px;
+	color: #c83140;
+}
+.page{
+	float: right;
+	margin-top: 42px;
+	font-size: 18px;
+}
+.page button{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #999;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 10px;
+	float: left;
+	background: #fff;
+	font-size: 18px;
+}
+/*RECOMMEND END*/
+
+

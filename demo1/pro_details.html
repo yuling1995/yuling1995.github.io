@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品列表页</title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/pro_details.css"/>
+		<!--必要样式-->
+		
+		<link href="css/city-picker.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/city-picker.data.js"></script>
+		<script src="js/city-picker.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>	
+	</head>
+	<body>
+		<div id="pro">
+			<!--TOP START-->
+			<div id="top">
+				<div class="contant">
+					<span>您好，欢迎来到金穗商城！</span>
+					<ul>
+						<li><a href="user.html">我的账户<b>▼</b></a></li>
+						<li><a href="order.html">我的订单<b>▼</b></a></li>
+						<li><a href="#">选购中心</a></li>
+					</ul>
+					<span>您好，请<a href="login.html">登录</a>  <a href="register.html">免费注册</a></span>
+				</div>
+			</div>
+			<!--TOP END-->
+			<!--HEAD START-->
+			<div class="head">
+				<a href="index.html"><img src="img/index_03.gif" /></a>	
+				<div>
+					<form>
+						<input type="text" placeholder="请输入您需要的商品名称" />
+						<input type="submit" value="" />
+					</form>
+					<p>
+						<a href="shop_list.html">橱柜</a>
+						<a href="shop_list.html">洗碗机</a>
+						<a href="shop_list.html">瓷碗</a>
+						<a href="shop_list.html">压力锅</a>
+						<a href="shop_list.html">平底锅</a>
+						<a href="shop_list.html">抽烟机</a>
+					</p>
+				</div>
+				<a href="shop_cart.html">
+					我的购物车（<span>{{num}}</span>）>
+				</a>
+			</div>
+			<!--HEAD END-->
+			
+			<!--NAV START-->
+			<div class="nav">
+				<div class="contant">
+					<div class="navs" id="navs">
+						<h2>
+							所有商品分类
+						</h2>
+						<div class="nav-item" v-for="item in list">
+							<div class="item-header">
+								<h4><img :src="item.imgSrc"/>{{item.title}}  ></h4>
+								<a href="shop_list.html" v-for="itemarr in item.arr">{{itemarr}}</a>
+							</div>
+							<div class="item-body">
+								<p><a href="#">更多{{item.title}}>></a></p>
+								<div v-for="itemobj in item.obj">
+									<h5>{{itemobj}} :</h5>
+									<p>
+										<a href="shop_list.html" v-for="knifeitem in knife">{{knifeitem}}</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<p>
+							<a href="shop_list.html">查看更多厨房用品>></a>
+						</p>
+					</div>
+					<ul>
+						<li>
+							<a href="index.html" class="active">首页</a>
+						</li>
+						<li>
+							<a href="shop_list.html">本周热卖</a>
+						</li>
+						<li>
+							<a href="shop_list.html">限时抢购</a>
+						</li>
+						<li>
+							<a href="shop_list.html">厨电用品</a>
+						</li>
+						<li>
+							<a href="shop_list.html">餐具用品</a>
+						</li>
+						<li>
+							<a href="shop_list.html">全球购</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--NAV END-->
+			<!--BREADCRUMB START-->
+			<div class="breadCrumb">
+				全部结果<span>&gt;</span>
+				<a href="#">烹饪锅具</a><span>&gt;</span>
+				<a href="#">炒锅</a><span>&gt;</span>
+				<a href="#">Neoflam天然陶瓷炒...</a>
+			</div>
+			<!--BREADCRUMB END-->
+			<!--GOODSDETAILS START-->
+			<div class="goodsDetails">
+				<div class="goods">
+					<div class="goodsLeft">
+						<div class="goodsImg">
+							<img src="img/pro_details_05.gif"/>
+							<div class="magnifierDiv"></div>
+							<div class="maskDiv"></div>
+							<div class="newDiv"><img src="img/pro_details_05.gif"/></div>
+						</div>
+						<div class="goodsImgs">
+							<button></button>
+							<ul>
+								<li class="active"><img src="img/pro_details_06.gif"/></li>
+								<li><img src="img/pro_details_07.gif"/></li>
+								<li><img src="img/pro_details_08.gif"/></li>
+							</ul>
+							<button></button>
+						</div>
+						<p>
+							<a href="#"><img src="img/pro_details_09.gif"/><span>关注</span></a>
+							<a href="#"><img src="img/pro_details_10.gif"/><span>分享</span></a>
+						</p>
+					</div>
+					<div class="goodsRight">
+						<h2>Neoflam Aeni陶瓷炒锅不粘锅 无油烟炒菜锅具 电磁炉通用厨具EC-AN-W30I 粉色 30CM</h2>
+						<h6>【爆款预售中】 礼品精选 百年厨具品牌 货真价实 </h6>
+						<div class="price">
+							<p><span>参考价</span><del>¥ 256.00</del></p>
+							<p><span>金穗价</span><b><span>¥</span>196.00</b></p>
+							<p><span>促销</span><i>满69元另加39元,即可在购物车换购热销商品</i></p>
+						</div>
+						<div class="sendTo">
+							<span class="title">送至</span>
+							<b>北京朝阳区三环以内<img src="img/shop_list_13.gif"/></b>
+							<i>库存：1500</i>
+							<p>支持  <span>货到付款</span> | <span>自提</span></p>
+							<div>预计10月18日到货，下单后立即发货</div>
+						</div>
+						<div class="sendTo">
+							<span class="title">重量</span>
+							<b>2.33kg</b>
+						</div>
+						<div class="buy">
+							<p>数量
+								<button @click="reduce">-</button>
+								<input type="text" v-model="num"/>
+								<button @click="add">+</button>
+							</p>
+							<div><button>立即购买</button><button>加入购物车</button></div>
+						</div>
+						<ul>
+							<li>特色服务</li>
+							<li>·支持7天无理由退货</li>
+							<li>·商品保管说明</li>
+							<li>·企业采购</li>
+						</ul>
+					</div>
+				</div>
+				<div class="look">
+					<h3>看了又看</h3>
+					<ul>
+						<li>
+							<a href="pro_details.html"><img src="img/pro_details_01.gif"/></a>
+							<p>¥ 125.00</p>
+						</li>
+						<li>
+							<a href="pro_details.html"><img src="img/pro_details_01.gif"/></a>
+							<p>¥ 125.00</p>
+						</li>
+						<li>
+							<a href="pro_details.html"><img src="img/pro_details_01.gif"/></a>
+							<p>¥ 125.00</p>
+						</li>
+					</ul>
+					<p>
+						<button></button>
+						<button></button>
+					</p>
+				</div>
+			</div>
+			<!--GOODSDETAILS END-->
+			
+			<!--MAIN START-->
+			<div class="main">
+				<div class="mainLeft">
+					<div class="like">
+						<h3>热门商品</h3>
+						<div class="box">
+							<ul>
+								<li v-for="item in likeArr">
+									<a href="pro_details.html"><img :src="item.img"/></a>
+									<h5><a href="pro_details.html">{{item.title}}</a></h5>
+									<p><span>¥</span>{{item.price}}</p>
+								</li>
+							</ul>
+						</div>
+						<p>
+							<button></button>
+							<button></button>
+						</p>
+					</div>
+					<div class="like">
+						<h3>猜你喜欢</h3>
+						<div class="box">
+							<ul>
+								<li v-for="item in likeArr">
+									<a href="pro_details.html"><img :src="item.img"/></a>
+									<h5><a href="pro_details.html">{{item.title}}</a></h5>
+									<p><span>¥</span>{{item.price}}</p>
+								</li>
+							</ul>
+						</div>
+						<p>
+							<button></button>
+							<button></button>
+						</p>
+					</div>
+				</div>
+				<div class="mainRight">
+					<div>
+						<ul>
+							<li><a href="#details" :class="{active:onoff}" >商品介绍</a></li>
+							<li><a href="#">包装及参数</a></li>
+							<li><a href="#comments" :class="{active:!onoff}">评价(9980+)</a></li>
+							<li><a href="#">售后保障</a></li>
+						</ul>
+						<button>加入购物车</button>
+					</div>
+					<div v-if="onoff">
+						<div class="info">
+							<h5>品牌：<span>Neoflam</span></h5>
+							<div>
+								<p>商品名称：Neoflam天然陶瓷炒锅...</p>
+								<p>商品编号：4332327</p>
+								<p>商品毛重：2.44kg</p>
+								<p>商品产地：广东广州</p>
+							</div>
+							<div>
+								<p>货号：EC-AN-W30I</p>
+								<p>材质：合金</p>
+								<p>适用炉灶：通用</p>
+								<p>是否带盖：是</p>
+							</div>
+							<div>
+								<p>直径：30cm</p>
+								<p>功能热点：不粘</p>
+							</div>
+							<a href="#">更多参数 >></a>
+						</div>
+						<div class="picture">
+							<img src="img/pro_details_12.gif"/>
+						</div>
+					</div>
+					<div v-if="!onoff">
+						<div class="reviews">
+							<h5>商品评价</h5>
+							<div class="tag">
+								<div>
+									<p>好评度</p>
+									<h4>98<span>%</span></h4>
+								</div>
+								<ul>
+									<li>外观精美(5)</li>
+									<li>大小合适(5)</li>
+									<li>质量不错(2)</li>
+									<li>物流很快(2)</li>
+									<li>非常满意(4)</li>
+									<li>包装很好(2)</li>
+									<li>无油烟(3)</li>
+									<li>不粘锅(4)</li>
+								</ul>
+							</div>
+		
+						</div>
+						<dl>
+							<dt>
+									<span>全部评价(9980+)</span>
+									<span>晒图(500)</span>
+									<span>追评(10+)</span>
+									<span>好评(1000+)</span>
+									<span>中评(0)</span>
+									<span>差评(0)</span>
+									<a href="#">推荐排序<img src="img/shop_list_13.gif"/></a>
+								</dt>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+								<div class="active">
+									<textarea></textarea>
+									<button>提交</button>
+									<span>还可以输入200字</span>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+							<dd>
+								<div>
+									<h4>e***3</h4>
+									<p>黄金会员</p>
+								</div>
+								<div>
+									<h3></h3>
+									<p>大爱，粉红色，大小合适。给奶奶买的，奶奶很喜欢。即便是老人，也会喜欢这种粉红色，很舒服。</p>
+									<div>
+										<span>粉色30CM</span>
+										<span>2017-09-22 17:10</span>
+										<a href="javascript:;">1</a>
+										<a href="javascript:;">4</a>
+										<a href="javascript:;">举报</a>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<p class="page">
+							<a href="javascript:;"><</a>
+							<a href="javascript:;" class="active">1</a>
+							<a href="javascript:;">2</a>
+							<a href="javascript:;">3</a>
+							<span>...</span>
+							<a href="javascript:;">4</a>
+							<a href="javascript:;">></a>
+						</p>
+					</div>
+						
+						
+				</div>
+			</div>
+			<!--MAIN END-->
+			<!--FOOTER START-->
+			<div class="footer">
+				<ul>
+					<li>
+						<a href="#"><img src="img/index1_147.gif" /></a>
+						<span>正品保证</span>
+						<p>正品保障，提供发票</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_148.gif" /></a>
+						<span>无忧售后</span>
+						<p>7天无理由退换货</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_149.gif" /></a>
+						<span>极速物流</span>
+						<p>极速物流，极速送达</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_150.gif" /></a>
+						<span>特色服务</span>
+						<p>私人定制套餐</p>
+					</li>
+					<li>
+						<a href="#"><img src="img/index1_151.gif" /></a>
+						<span>帮助中心</span>
+						<p>您的购物指南</p>
+					</li>
+				</ul>
+				<div>
+					<dl>
+						<dt>新手上路</dt>
+						<dd>
+							<a href="#">订购方式</a>
+						</dd>
+						<dd>
+							<a href="#">购物流程</a>
+						</dd>
+						<dd>
+							<a href="#">在线支付</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>购物指南</dt>
+						<dd>
+							<a href="#">订购流程</a>
+						</dd>
+						<dd>
+							<a href="#">常见问题</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>配送方式</dt>
+						<dd>
+							<a href="#">货到付款区域</a>
+						</dd>
+						<dd>
+							<a href="#">支付方式说明</a>
+						</dd>
+						<dd>
+							<a href="#">配送支付查询</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="#">售后服务保证</a>
+						</dd>
+						<dd>
+							<a href="#">换货流程</a>
+						</dd>
+						<dd>
+							<a href="#">退换货流程</a>
+						</dd>
+					</dl>
+					<h3>0757-66601567</h3>
+					<button>24小时客服</button>
+				</div>
+				<p>
+					<a href="#">产品分类</a><span>|</span>
+					<a href="#">创意厨卫</a><span>|</span>
+					<a href="#">新闻资讯</a><span>|</span>
+					<a href="#">行业展会</a><span>|</span>
+					<a href="#">推荐品牌</a><span>|</span>
+					<a href="#">推荐厂家</a><span>|</span>
+					<a href="#">需求发布</a>
+				</p>
+				<p>
+					版权所有 2017 厨具网购商城 <span>|</span>备案编号:粤ICP备13000117号<span>|</span>电话：0757-66601666
+				</p>
+	
+			</div>
+			<!--FOOTER END-->
+			<!--RIGHTSIDEBAR START-->
+			<div class="rightsideBar">
+				<ol>
+					<li><a href="user.html"></a></li>
+					<li>
+						<a href="shop_cart.html">购物车<span>{{num}}</span></a>
+					</li>
+					<li><a href="#">我的消息</a></li>
+				</ol>
+				<ul>
+					<li><a href="#"><img src="img/index_150.gif" /></a></li>
+					<li><a href="#"><img src="img/index_151.gif" /></a></li>
+					<li><a href="#"><img src="img/index_152.gif" /></a></li>
+					<li><a href="#top"><img src="img/index_153.gif" /></a></li>
+				</ul>
+			</div>
+			<!--RIGHTSIDEBAR END-->
+		</div>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pro_details.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
